@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct Characters: Codable {
+    var results: [Character]? = []
+    
+    enum CodingKeys: String, CodingKey {
+        case results
+    }
+}

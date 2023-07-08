@@ -7,15 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4328C6914FB2886A058E8787 /* Pods_lab4_innopolis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8EB1A875536A61A011B4EB /* Pods_lab4_innopolis.framework */; };
+		721C3E1C2A59AEC600C3887D /* APITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721C3E1B2A59AEC600C3887D /* APITarget.swift */; };
 		72A8F9C32A51A85A00967690 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A8F9C22A51A85A00967690 /* AppDelegate.swift */; };
 		72A8F9C52A51A85A00967690 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A8F9C42A51A85A00967690 /* SceneDelegate.swift */; };
 		72A8F9C72A51A85A00967690 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A8F9C62A51A85A00967690 /* ViewController.swift */; };
 		72A8F9CA2A51A85A00967690 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72A8F9C82A51A85A00967690 /* Main.storyboard */; };
 		72A8F9CC2A51A85B00967690 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72A8F9CB2A51A85B00967690 /* Assets.xcassets */; };
 		72A8F9CF2A51A85B00967690 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72A8F9CD2A51A85B00967690 /* LaunchScreen.storyboard */; };
+		72A8F9D92A51C81300967690 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A8F9D82A51C81300967690 /* PersonTableViewCell.swift */; };
+		72A8F9DB2A549B0300967690 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A8F9DA2A549B0300967690 /* DetailViewController.swift */; };
+		72CC60662A59CB8D006C336F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CC60652A59CB8D006C336F /* NetworkManager.swift */; };
+		72CC60692A59CC04006C336F /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CC60682A59CC04006C336F /* UIImageView+Extensions.swift */; };
+		72CC606C2A59CE14006C336F /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CC606B2A59CE14006C336F /* Character.swift */; };
+		72CC606E2A59EFEA006C336F /* ResponseReturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CC606D2A59EFEA006C336F /* ResponseReturn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C52FDD06BE152C9F4ADAC08 /* Pods-lab4-innopolis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lab4-innopolis.release.xcconfig"; path = "Target Support Files/Pods-lab4-innopolis/Pods-lab4-innopolis.release.xcconfig"; sourceTree = "<group>"; };
+		721C3E1B2A59AEC600C3887D /* APITarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITarget.swift; sourceTree = "<group>"; };
 		72A8F9BF2A51A85A00967690 /* lab4-innopolis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lab4-innopolis.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72A8F9C22A51A85A00967690 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72A8F9C42A51A85A00967690 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +34,14 @@
 		72A8F9CB2A51A85B00967690 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72A8F9CE2A51A85B00967690 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72A8F9D02A51A85B00967690 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72A8F9D82A51C81300967690 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
+		72A8F9DA2A549B0300967690 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		72CC60652A59CB8D006C336F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		72CC60682A59CC04006C336F /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		72CC606B2A59CE14006C336F /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		72CC606D2A59EFEA006C336F /* ResponseReturn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseReturn.swift; sourceTree = "<group>"; };
+		BA7944FE101EC3FECB4142A4 /* Pods-lab4-innopolis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lab4-innopolis.debug.xcconfig"; path = "Target Support Files/Pods-lab4-innopolis/Pods-lab4-innopolis.debug.xcconfig"; sourceTree = "<group>"; };
+		BB8EB1A875536A61A011B4EB /* Pods_lab4_innopolis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lab4_innopolis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +49,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4328C6914FB2886A058E8787 /* Pods_lab4_innopolis.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		251A56FD9BF71A234E012D82 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BA7944FE101EC3FECB4142A4 /* Pods-lab4-innopolis.debug.xcconfig */,
+				1C52FDD06BE152C9F4ADAC08 /* Pods-lab4-innopolis.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		721C3BBC2A59A7FE00C3887D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				721C3E1B2A59AEC600C3887D /* APITarget.swift */,
+				72CC60652A59CB8D006C336F /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		72A8F9B62A51A85A00967690 = {
 			isa = PBXGroup;
 			children = (
 				72A8F9C12A51A85A00967690 /* lab4-innopolis */,
 				72A8F9C02A51A85A00967690 /* Products */,
+				251A56FD9BF71A234E012D82 /* Pods */,
+				C88A421E31EA6C7A4DFDF092 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +95,45 @@
 		72A8F9C12A51A85A00967690 /* lab4-innopolis */ = {
 			isa = PBXGroup;
 			children = (
+				72CC606A2A59CC45006C336F /* ResponseModels */,
+				72CC60672A59CBE9006C336F /* Extensions */,
+				721C3BBC2A59A7FE00C3887D /* Services */,
 				72A8F9C22A51A85A00967690 /* AppDelegate.swift */,
 				72A8F9C42A51A85A00967690 /* SceneDelegate.swift */,
 				72A8F9C62A51A85A00967690 /* ViewController.swift */,
 				72A8F9C82A51A85A00967690 /* Main.storyboard */,
+				72A8F9DA2A549B0300967690 /* DetailViewController.swift */,
 				72A8F9CB2A51A85B00967690 /* Assets.xcassets */,
 				72A8F9CD2A51A85B00967690 /* LaunchScreen.storyboard */,
 				72A8F9D02A51A85B00967690 /* Info.plist */,
+				72A8F9D82A51C81300967690 /* PersonTableViewCell.swift */,
 			);
 			path = "lab4-innopolis";
+			sourceTree = "<group>";
+		};
+		72CC60672A59CBE9006C336F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				72CC60682A59CC04006C336F /* UIImageView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		72CC606A2A59CC45006C336F /* ResponseModels */ = {
+			isa = PBXGroup;
+			children = (
+				72CC606B2A59CE14006C336F /* Character.swift */,
+				72CC606D2A59EFEA006C336F /* ResponseReturn.swift */,
+			);
+			path = ResponseModels;
+			sourceTree = "<group>";
+		};
+		C88A421E31EA6C7A4DFDF092 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB8EB1A875536A61A011B4EB /* Pods_lab4_innopolis.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +143,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 72A8F9D32A51A85B00967690 /* Build configuration list for PBXNativeTarget "lab4-innopolis" */;
 			buildPhases = (
+				5E981EEFEABC177A1025C9CE /* [CP] Check Pods Manifest.lock */,
 				72A8F9BB2A51A85A00967690 /* Sources */,
 				72A8F9BC2A51A85A00967690 /* Frameworks */,
 				72A8F9BD2A51A85A00967690 /* Resources */,
+				F7DE01C74BC0505CA3CB37D5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +204,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5E981EEFEABC177A1025C9CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-lab4-innopolis-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7DE01C74BC0505CA3CB37D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-lab4-innopolis/Pods-lab4-innopolis-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-lab4-innopolis/Pods-lab4-innopolis-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-lab4-innopolis/Pods-lab4-innopolis-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		72A8F9BB2A51A85A00967690 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72CC606C2A59CE14006C336F /* Character.swift in Sources */,
 				72A8F9C72A51A85A00967690 /* ViewController.swift in Sources */,
+				72A8F9DB2A549B0300967690 /* DetailViewController.swift in Sources */,
 				72A8F9C32A51A85A00967690 /* AppDelegate.swift in Sources */,
+				72CC60662A59CB8D006C336F /* NetworkManager.swift in Sources */,
+				72A8F9D92A51C81300967690 /* PersonTableViewCell.swift in Sources */,
+				72CC606E2A59EFEA006C336F /* ResponseReturn.swift in Sources */,
 				72A8F9C52A51A85A00967690 /* SceneDelegate.swift in Sources */,
+				72CC60692A59CC04006C336F /* UIImageView+Extensions.swift in Sources */,
+				721C3E1C2A59AEC600C3887D /* APITarget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +402,7 @@
 		};
 		72A8F9D42A51A85B00967690 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA7944FE101EC3FECB4142A4 /* Pods-lab4-innopolis.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +431,7 @@
 		};
 		72A8F9D52A51A85B00967690 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C52FDD06BE152C9F4ADAC08 /* Pods-lab4-innopolis.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
