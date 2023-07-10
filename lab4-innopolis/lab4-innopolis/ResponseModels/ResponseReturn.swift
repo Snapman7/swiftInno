@@ -8,7 +8,7 @@
 import Foundation
 
 struct Characters: Codable {
-    var results: [Character]? = []
+    var results: [CharacterStruct]? = []
     
     enum CodingKeys: String, CodingKey {
         case results

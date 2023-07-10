@@ -19,8 +19,11 @@
 		72A8F9DB2A549B0300967690 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A8F9DA2A549B0300967690 /* DetailViewController.swift */; };
 		72CC60662A59CB8D006C336F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CC60652A59CB8D006C336F /* NetworkManager.swift */; };
 		72CC60692A59CC04006C336F /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CC60682A59CC04006C336F /* UIImageView+Extensions.swift */; };
-		72CC606C2A59CE14006C336F /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CC606B2A59CE14006C336F /* Character.swift */; };
 		72CC606E2A59EFEA006C336F /* ResponseReturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CC606D2A59EFEA006C336F /* ResponseReturn.swift */; };
+		72CC608B2A5C7C06006C336F /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CC608A2A5C7C06006C336F /* PersistentContainer.swift */; };
+		72CC60B12A5C89A8006C336F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 72CC60AF2A5C89A8006C336F /* Model.xcdatamodeld */; };
+		72CC60B42A5C8A2F006C336F /* CDataCharacter+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CC60B22A5C8A2F006C336F /* CDataCharacter+CoreDataClass.swift */; };
+		72CC60B52A5C8A2F006C336F /* CDataCharacter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CC60B32A5C8A2F006C336F /* CDataCharacter+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +41,11 @@
 		72A8F9DA2A549B0300967690 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		72CC60652A59CB8D006C336F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		72CC60682A59CC04006C336F /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
-		72CC606B2A59CE14006C336F /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		72CC606D2A59EFEA006C336F /* ResponseReturn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseReturn.swift; sourceTree = "<group>"; };
+		72CC608A2A5C7C06006C336F /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; };
+		72CC60B02A5C89A8006C336F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		72CC60B22A5C8A2F006C336F /* CDataCharacter+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDataCharacter+CoreDataClass.swift"; path = "lab4-innopolis/CDataCharacter+CoreDataClass.swift"; sourceTree = "<group>"; };
+		72CC60B32A5C8A2F006C336F /* CDataCharacter+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDataCharacter+CoreDataProperties.swift"; path = "lab4-innopolis/CDataCharacter+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BA7944FE101EC3FECB4142A4 /* Pods-lab4-innopolis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lab4-innopolis.debug.xcconfig"; path = "Target Support Files/Pods-lab4-innopolis/Pods-lab4-innopolis.debug.xcconfig"; sourceTree = "<group>"; };
 		BB8EB1A875536A61A011B4EB /* Pods_lab4_innopolis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lab4_innopolis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -77,6 +83,8 @@
 		72A8F9B62A51A85A00967690 = {
 			isa = PBXGroup;
 			children = (
+				72CC60B22A5C8A2F006C336F /* CDataCharacter+CoreDataClass.swift */,
+				72CC60B32A5C8A2F006C336F /* CDataCharacter+CoreDataProperties.swift */,
 				72A8F9C12A51A85A00967690 /* lab4-innopolis */,
 				72A8F9C02A51A85A00967690 /* Products */,
 				251A56FD9BF71A234E012D82 /* Pods */,
@@ -107,6 +115,8 @@
 				72A8F9CD2A51A85B00967690 /* LaunchScreen.storyboard */,
 				72A8F9D02A51A85B00967690 /* Info.plist */,
 				72A8F9D82A51C81300967690 /* PersonTableViewCell.swift */,
+				72CC608A2A5C7C06006C336F /* PersistentContainer.swift */,
+				72CC60AF2A5C89A8006C336F /* Model.xcdatamodeld */,
 			);
 			path = "lab4-innopolis";
 			sourceTree = "<group>";
@@ -122,7 +132,6 @@
 		72CC606A2A59CC45006C336F /* ResponseModels */ = {
 			isa = PBXGroup;
 			children = (
-				72CC606B2A59CE14006C336F /* Character.swift */,
 				72CC606D2A59EFEA006C336F /* ResponseReturn.swift */,
 			);
 			path = ResponseModels;
@@ -251,16 +260,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72CC606C2A59CE14006C336F /* Character.swift in Sources */,
 				72A8F9C72A51A85A00967690 /* ViewController.swift in Sources */,
+				72CC60B52A5C8A2F006C336F /* CDataCharacter+CoreDataProperties.swift in Sources */,
 				72A8F9DB2A549B0300967690 /* DetailViewController.swift in Sources */,
+				72CC608B2A5C7C06006C336F /* PersistentContainer.swift in Sources */,
 				72A8F9C32A51A85A00967690 /* AppDelegate.swift in Sources */,
 				72CC60662A59CB8D006C336F /* NetworkManager.swift in Sources */,
 				72A8F9D92A51C81300967690 /* PersonTableViewCell.swift in Sources */,
 				72CC606E2A59EFEA006C336F /* ResponseReturn.swift in Sources */,
 				72A8F9C52A51A85A00967690 /* SceneDelegate.swift in Sources */,
 				72CC60692A59CC04006C336F /* UIImageView+Extensions.swift in Sources */,
+				72CC60B12A5C89A8006C336F /* Model.xcdatamodeld in Sources */,
 				721C3E1C2A59AEC600C3887D /* APITarget.swift in Sources */,
+				72CC60B42A5C8A2F006C336F /* CDataCharacter+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +492,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		72CC60AF2A5C89A8006C336F /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				72CC60B02A5C89A8006C336F /* Model.xcdatamodel */,
+			);
+			currentVersion = 72CC60B02A5C89A8006C336F /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 72A8F9B72A51A85A00967690 /* Project object */;
 }

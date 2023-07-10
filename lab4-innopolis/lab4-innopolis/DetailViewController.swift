@@ -8,15 +8,15 @@
 import UIKit
 
 protocol DetailViewControllerDelegate: AnyObject {
-    func changeStatus(with id: Int, to status: Character.Status)
+    func changeStatus(with indexPath: IndexPath, to status: String)
 }
 
 final class DetailViewController: UIViewController {
 
-    var data: Character? {
+    var character: CDataCharacter? {
         didSet {
-            guard let data else { return }
-            setUpData(data)
+            guard let character else { return }
+            setUpData(character)
         }
     }
     
@@ -29,41 +29,45 @@ final class DetailViewController: UIViewController {
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var changeStatusLabel: UIButton!
     @IBOutlet weak var speciesLabel: UILabel!
+    var indexPath: IndexPath?
     
     
 
-    func setUpData(_ character: Character) {
-        nameLabel.text = "\(character.name)"
-        speciesLabel.text = "Species: \(character.species)"
-        locationLabel.text = "Location: \(character.location)"
-        statusLabel.text = "Status: \(character.status.rawValue)"
-        genderLabel.text = "Species: \(character.gender.rawValue)"
-        personImageView.download(from: character.image)
+    func setUpData(_ character: CDataCharacter) {
+        nameLabel.text = "\(character.name ?? "")"
+        speciesLabel.text = "Species: \(character.species ?? "")"
+        locationLabel.text = "Location: \(character.location ?? "")"
+        statusLabel.text = "Status: \(character.status ?? "")"
+        genderLabel.text = "Species: \(character.gender ?? "")"
+        personImageView.download(from: character.image ?? "")
     }
 
     @IBAction func changeStatusButtonDidTap(_ sender: Any) {
         let alertController = UIAlertController(title: "Change Status", message: "", preferredStyle: .alert)
         
         let deadAction = UIAlertAction(title: "Dead", style: .default) { [self] _ in
-            data?.status = .dead
-            guard let data else { return }
+            character?.status = "Dead"
+            guard let character else { return }
+            guard let indexPath else { return }
             
-            delegate?.changeStatus(with: data.id, to: data.status)
+            delegate?.changeStatus(with: indexPath, to: character.status ?? "")
         }
         let aliveAction = UIAlertAction(title: "Alive", style: .default) { [self] _ in
-            data?.status = .alive
-            guard let data else { return }
+            character?.status = "Alive"
+            guard let character else { return }
+            guard let indexPath else { return }
             
-            delegate?.changeStatus(with: data.id, to: data.status)
+            delegate?.changeStatus(with: indexPath, to: character.status ?? "")
         }
         
         let unknownAction = UIAlertAction(title: "Unknown", style: .default) { [self] _ in
-            data?.status = .unknown
-            guard let data else { return }
+            character?.status = "unknown"
+            guard let character else { return }
+            guard let indexPath else { return }
             
-            delegate?.changeStatus(with: data.id, to: data.status)
+                delegate?.changeStatus(with: indexPath, to: character.status ?? "")
         }
-        
+
         alertController.addAction(deadAction)
         alertController.addAction(aliveAction)
         alertController.addAction(unknownAction)
