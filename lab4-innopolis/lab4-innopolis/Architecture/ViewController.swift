@@ -8,6 +8,15 @@
 import UIKit
 import CoreData
 
+protocol ViewOutput {
+    func viewDidTapButton(with status: String)
+}
+
+protocol ViewInput: AnyObject {
+    func changeStatus(to status: String)
+}
+
+
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate {
 
     @IBOutlet weak var tableView: UITableView!
@@ -29,7 +38,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         return frc
     }()
-    
     
     private let manager: NetworkManagerProtocol = NetworkManger()
     
@@ -55,20 +63,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             print(error)
         }
         
-        
         if frc.fetchedObjects?.count == 0 {
             loadCharacters()
         }
         
     }
-
     
-    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        tableView.reloadData()
-    }
-
     
-    private func loadCharacters() {
+    func loadCharacters() {
         for i in 1...42 {
             manager.fetchCharacters(on: i) { result in
                 switch result {
@@ -82,10 +84,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                     }
                 case let .failure(error):
                     print(error)
-                    
                 }
             }
         }
+    }
+
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.reloadData()
     }
     
     // MARK - UITableViewDataSource, UITableViewDelegate
@@ -114,28 +120,32 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         guard let detailedViewController = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else { return }
         
-        detailedViewController.delegate = self
+        
+        let interactor = Interactor(character: character)
+        let presenter = Presenter(interactor: interactor)
+        
+        interactor.output = presenter
+        presenter.view = detailedViewController
         
         present(detailedViewController, animated: true)
         
+        detailedViewController.output = presenter
+        detailedViewController.delegate = self
+        
         detailedViewController.character = character
-        detailedViewController.indexPath = indexPath
     }
     
     
 }
 
 
-// MARK - DetailViewController Delegate 
+// MARK - DetailViewControllerDelegate
 extension ViewController: DetailViewControllerDelegate {
-    func changeStatus(with indexPath: IndexPath, to status: String) {
-        let character = frc.object(at: indexPath)
-        character.status = status
-        PersistentContainer.shared.saveContext()
-        
+    func dismissMe() {
         dismiss(animated: true)
     }
     
     
 }
+
 

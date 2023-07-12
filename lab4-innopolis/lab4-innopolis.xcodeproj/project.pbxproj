@@ -24,6 +24,8 @@
 		72CC60B12A5C89A8006C336F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 72CC60AF2A5C89A8006C336F /* Model.xcdatamodeld */; };
 		72CC60B42A5C8A2F006C336F /* CDataCharacter+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CC60B22A5C8A2F006C336F /* CDataCharacter+CoreDataClass.swift */; };
 		72CC60B52A5C8A2F006C336F /* CDataCharacter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CC60B32A5C8A2F006C336F /* CDataCharacter+CoreDataProperties.swift */; };
+		72CC60DF2A5EFA91006C336F /* RaMPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CC60DE2A5EFA91006C336F /* RaMPresenter.swift */; };
+		72CC60E12A5EFAA0006C336F /* RaMInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CC60E02A5EFAA0006C336F /* RaMInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		72CC60B02A5C89A8006C336F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		72CC60B22A5C8A2F006C336F /* CDataCharacter+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDataCharacter+CoreDataClass.swift"; path = "lab4-innopolis/CDataCharacter+CoreDataClass.swift"; sourceTree = "<group>"; };
 		72CC60B32A5C8A2F006C336F /* CDataCharacter+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDataCharacter+CoreDataProperties.swift"; path = "lab4-innopolis/CDataCharacter+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		72CC60DE2A5EFA91006C336F /* RaMPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaMPresenter.swift; sourceTree = "<group>"; };
+		72CC60E02A5EFAA0006C336F /* RaMInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaMInteractor.swift; sourceTree = "<group>"; };
 		BA7944FE101EC3FECB4142A4 /* Pods-lab4-innopolis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lab4-innopolis.debug.xcconfig"; path = "Target Support Files/Pods-lab4-innopolis/Pods-lab4-innopolis.debug.xcconfig"; sourceTree = "<group>"; };
 		BB8EB1A875536A61A011B4EB /* Pods_lab4_innopolis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lab4_innopolis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -103,14 +107,13 @@
 		72A8F9C12A51A85A00967690 /* lab4-innopolis */ = {
 			isa = PBXGroup;
 			children = (
+				72CC60D72A5EFA3A006C336F /* Architecture */,
 				72CC606A2A59CC45006C336F /* ResponseModels */,
 				72CC60672A59CBE9006C336F /* Extensions */,
 				721C3BBC2A59A7FE00C3887D /* Services */,
 				72A8F9C22A51A85A00967690 /* AppDelegate.swift */,
 				72A8F9C42A51A85A00967690 /* SceneDelegate.swift */,
-				72A8F9C62A51A85A00967690 /* ViewController.swift */,
 				72A8F9C82A51A85A00967690 /* Main.storyboard */,
-				72A8F9DA2A549B0300967690 /* DetailViewController.swift */,
 				72A8F9CB2A51A85B00967690 /* Assets.xcassets */,
 				72A8F9CD2A51A85B00967690 /* LaunchScreen.storyboard */,
 				72A8F9D02A51A85B00967690 /* Info.plist */,
@@ -135,6 +138,17 @@
 				72CC606D2A59EFEA006C336F /* ResponseReturn.swift */,
 			);
 			path = ResponseModels;
+			sourceTree = "<group>";
+		};
+		72CC60D72A5EFA3A006C336F /* Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				72A8F9DA2A549B0300967690 /* DetailViewController.swift */,
+				72A8F9C62A51A85A00967690 /* ViewController.swift */,
+				72CC60DE2A5EFA91006C336F /* RaMPresenter.swift */,
+				72CC60E02A5EFAA0006C336F /* RaMInteractor.swift */,
+			);
+			path = Architecture;
 			sourceTree = "<group>";
 		};
 		C88A421E31EA6C7A4DFDF092 /* Frameworks */ = {
@@ -263,7 +277,9 @@
 				72A8F9C72A51A85A00967690 /* ViewController.swift in Sources */,
 				72CC60B52A5C8A2F006C336F /* CDataCharacter+CoreDataProperties.swift in Sources */,
 				72A8F9DB2A549B0300967690 /* DetailViewController.swift in Sources */,
+				72CC60DF2A5EFA91006C336F /* RaMPresenter.swift in Sources */,
 				72CC608B2A5C7C06006C336F /* PersistentContainer.swift in Sources */,
+				72CC60E12A5EFAA0006C336F /* RaMInteractor.swift in Sources */,
 				72A8F9C32A51A85A00967690 /* AppDelegate.swift in Sources */,
 				72CC60662A59CB8D006C336F /* NetworkManager.swift in Sources */,
 				72A8F9D92A51C81300967690 /* PersonTableViewCell.swift in Sources */,
